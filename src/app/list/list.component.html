@@ -1,0 +1,27 @@
+<mat-accordion>
+  <section *ngFor="let data of userData ; let i = index">
+      <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{data.firstName}}{{data.lastName}}
+        </mat-panel-title>
+        <mat-panel-description>
+          userId : {{data.userId}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <section>
+          <label>Email::{{data.email}}</label>
+        </section>
+        <section>
+          <label>Password ::{{data.password}}</label>
+        </section>
+        <section>
+          <label>Mob::{{data.phone}}</label>
+        </section>
+        <label>List of vehicles</label>
+        <section *ngFor = "let vehicle of data.vehicle">
+          <label>{{vehicle}}</label>kkk
+        </section>
+    </mat-expansion-panel>
+  </section>
+</mat-accordion>
